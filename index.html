@@ -91,7 +91,7 @@
           <h1>Hire The Best Virtual Assistants</h1>
           <h2>We provide small to medium sized businesses with talented, dedicated staff and virtual assistants from the Philippines.</h2>
           <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="#about" class="btn-get-started scrollto">Free Consultation</a>
+            <a href="#contact" class="btn-get-started scrollto">Free Consultation</a>
             <!--a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a-->
           </div>
         </div>
@@ -859,7 +859,7 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
@@ -876,12 +876,7 @@
               </div>
               <div class="form-group">
                 <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" placeholder="Enter your message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+                <textarea class="form-control" id="message" name="message" rows="10" placeholder="Enter your message" required></textarea>
               </div>
               <div class="text-center"><button id="submit_btn" type="submit" onclick="send_message()">Send Message</button></div>
             </form>
@@ -904,7 +899,7 @@
             <h4>Join Our Newsletter</h4>
             <p>Join our newsletter for getting latest updates.</p>
             <form action="" method="post">
-              <input type="email" name="email" title="hello"><input type="submit" value="Subscribe">
+              <input type="email" name="email" title="hello" placeholder="Enter your email" required><input type="submit" value="Subscribe">
             </form>
           </div>
         </div>
@@ -993,6 +988,33 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+ 
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+    apiKey: "AIzaSyDaSKeeIOlbCHztp90uHXTbpFxQUGEbLuo",
+    authDomain: "agency-47f99.firebaseapp.com",
+    projectId: "agency-47f99",
+    storageBucket: "agency-47f99.appspot.com",
+    messagingSenderId: "652122348926",
+    appId: "1:652122348926:web:9527c12f4ef1129e79672f",
+    measurementId: "G-PPL58LV8KP"
+  };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+
+  <script src="forms/contact1.js"></script>
 
 </body>
 
